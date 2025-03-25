@@ -9,3 +9,10 @@ openDiv.addEventListener('click',()=>{
 closeDiv.addEventListener("click",()=>{
 	modal.style.display = 'none'
 })
+
+
+window.addEventListener("click", (event) => {
+    if (!modal.contains(event.target) && event.target !== modal && event.target !== openDiv) {
+        modal.style.display = 'none';
+    }
+});
